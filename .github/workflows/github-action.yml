@@ -1,11 +1,11 @@
-name: Run rspec
+name: Run test
 
 on:
   push:
   pull_request:
 
 jobs:
-  rspec:
+  test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -27,7 +27,7 @@ jobs:
           bundle exec rails db:create RAILS_ENV=test
           bundle exec rails db:migrate RAILS_ENV=test
 
-      - name: Run rspec
+      - name: Run test
         run: bundle exec rails test
 
       - name: Simplecov Report
