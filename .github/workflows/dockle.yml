@@ -17,9 +17,9 @@ jobs:
         run: |
           docker build -f Dockerfile -t ${{ env.DOCKER_IMAGE_TAG }} .
 
-+     - name: run-dockle
-+       uses: erzz/dockle-action@v1
-+       with:
-+         image: ${{ env.DOCKER_IMAGE_TAG }}
-+         exit-code: 1
-+         failure-threshold: fatal
+      - name: run-dockle
+        uses: erzz/dockle-action@v1
+        with:
+          image: ${{ env.DOCKER_IMAGE_TAG }}
+          exit-code: 1
+         failure-threshold: fatal
