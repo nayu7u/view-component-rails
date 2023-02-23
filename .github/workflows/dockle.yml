@@ -14,11 +14,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: docker-build
-        run: docker build -f Dockerfile -t ${{ env.DOCKER_IMAGE_TAG }} .
+        run: |
+          docker build -f Dockerfile -t ${{ env.DOCKER_IMAGE_TAG }} .
 
       - name: run-dockle
         uses: erzz/dockle-action@v1
         with:
           image: ${{ env.DOCKER_IMAGE_TAG }}
           exit-code: 1
-         failure-threshold: fatal
+          failure-threshold: fatal
