@@ -1,6 +1,6 @@
 name: Docker Test
 on:
-  push:
+  pull_request:
     paths:
       - Dockerfile
 env:
