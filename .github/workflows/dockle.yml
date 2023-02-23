@@ -5,6 +5,10 @@ on:
       - Dockerfile
 env:
   DOCKER_IMAGE_TAG: 'docker-image'
+  USERNAME: 'developer'
+  GROUPNAME: 'developer'
+  UID: 1000
+  GID: 1000
 
 jobs:
   build:
