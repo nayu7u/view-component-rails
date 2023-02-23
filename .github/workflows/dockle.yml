@@ -17,7 +17,7 @@ jobs:
         run: |
           docker build -f Dockerfile \
             -t ${{ env.DOCKER_IMAGE_TAG }} \
-            --build-arg $(cat .env | tr '\n' ' ') \
+            $(cat .env | sed 's/^/--build-arg /g') \
             .
 
       - name: run-dockle
