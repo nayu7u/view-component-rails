@@ -26,4 +26,4 @@ jobs:
           image: ${{ env.DOCKER_IMAGE_TAG }}
           exit-code: 1
           failure-threshold: fatal
-          accept-file: 'database.yml'
+          accept-filenames: database.yml
