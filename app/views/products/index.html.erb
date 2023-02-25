@@ -1,0 +1,7 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<%= render(ProductComponent.with_collection(@products)) %>
+
+<%= link_to "New product", new_product_path %>
