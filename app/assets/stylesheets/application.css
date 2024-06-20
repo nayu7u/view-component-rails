@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+ .app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+ }
+
+ .sidebar {
+  width: 200px;
+  box-sizing: border-box;
+  border: 8px solid;
+ }
+
+ .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+ }
+
+ .task {
+  height: 100;
+  box-sizing: border-box;
+  border: 8px solid;
+ }
